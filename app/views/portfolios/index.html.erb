@@ -1,30 +1,12 @@
-<p id="notice"><%= notice %></p>
+<h1>Portfolio Items</h1>
 
-<h1>Blogs</h1>
+<%= link_to "Create New Item", new_portfolio_path %> 
 
-<table>
-  <thead>
-    <tr>
-      <th>Blog Title</th>
-      <th>Body</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.title %></td>
-        <td><%= blog.body %></td>
-        <td><%= link_to blog.status, toggle_status_blog_path(blog) %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Delete Post', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Blog', new_blog_path %>
+<% @portfolio_items.each do |portfolio_item| %>
+  <p><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %><p>
+  <p><%= portfolio_item.subtitle %><p>
+  <p><%= portfolio_item.body %><p>
+  <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil?  %>
+  <%= link_to "Edit", edit_portfolio_path(portfolio_item) %>
+  <%= button_to 'Delete Porfolio Item', portfolio_path(portfolio_item), method: :delete, data: { turbo_confirm: "Are you sure?" } %>
+<% end %>
