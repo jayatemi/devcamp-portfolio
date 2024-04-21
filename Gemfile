@@ -64,3 +64,4 @@ end
 gem 'friendly_id', '~> 5.5.0'
 gem 'devise', '~> 4.9', '>= 4.9.4'
 gem 'sassc-rails'
+gem 'bootstrap', '~> 5.3.2'
