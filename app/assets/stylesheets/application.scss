@@ -160,8 +160,18 @@ body {
     width: 55rem;
   }
 }
-
+/*
+ * Custom Styles
+ */
 
 .spacer-left {
    margin-left: 15px; /* Adjust the margin-left value to set the desired space */
+}
+
+.card-body {
+   text-align: left;
+}
+
+.auth-links a {
+   color: black;
 }
