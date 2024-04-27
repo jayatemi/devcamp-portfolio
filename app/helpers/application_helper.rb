@@ -18,7 +18,7 @@ module ApplicationHelper
   end
 
   def copyright_generator
-    AtemiViewTool::Renderer.copyright 'Jonathan Atemi', 'All rights reserved'
+    AtemiViewTool::Renderer.copyright 'Jonathan Atemi','| All Rights Reserved'
   end
 
 end
