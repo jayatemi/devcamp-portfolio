@@ -1,8 +1,14 @@
 <footer class="text-muted">
   <div class="container">
-    <p class="float-right">
-      <a href="#">Back to top</a>
-    </p>
-    <p><%=copyright_generator %></p>
+    <div class="d-flex justify-content-between align-items-center">
+      <p>
+        <%= copyright_generator %>
+      </p>
+      <p class="ml-auto">
+        <%= link_to "View All Portfolio Items", portfolios_path %> | 
+        <a href="#">Back to top</a>
+      </p>
+    </div>
+    
   </div>
 </footer>
