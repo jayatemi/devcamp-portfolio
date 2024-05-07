@@ -66,6 +66,7 @@ group :development do
 end
 
 gem 'friendly_id', '~> 5.5.0'
+gem 'coffee-rails', '~> 4.2'
 gem 'devise', '~> 4.9', '>= 4.9.4'
 gem 'sassc-rails'
 gem 'bootstrap', '~> 5.3.2'
@@ -73,4 +74,4 @@ gem 'atemi_view_tool', '~> 0.1.0'
 gem 'petergate', '~> 3.0'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.8'
 gem 'kaminari', '~> 1.2', '>= 1.2.2'
-gem 'jquery-ui-rails', '~> 7.0'
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'

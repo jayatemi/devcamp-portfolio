@@ -27,6 +27,10 @@ module DevcampPortfolio
     config.assets.enabled = true
     config.assets.version = '1.0'
 
+
+    # Use CoffeeScript for .coffee assets
+    config.generators.javascript_engine = :coffee
+    
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
     # Common ones are `templates`, `generators`, or `middleware`, for example.
