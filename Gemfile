@@ -14,11 +14,15 @@ gem "pg", "~> 1.1"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 
+gem 'jquery-rails'
+
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem "turbo-rails"
+gem 'turbo-rails', '~> 2.0', '>= 2.0.5'
+
+gem "turbolinks"
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
@@ -62,8 +66,12 @@ group :development do
 end
 
 gem 'friendly_id', '~> 5.5.0'
+gem 'coffee-rails', '~> 4.2'
 gem 'devise', '~> 4.9', '>= 4.9.4'
 gem 'sassc-rails'
 gem 'bootstrap', '~> 5.3.2'
 gem 'atemi_view_tool', '~> 0.1.0'
 gem 'petergate', '~> 3.0'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.8'
+gem 'kaminari', '~> 1.2', '>= 1.2.2'
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
