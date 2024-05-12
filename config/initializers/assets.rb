@@ -8,8 +8,14 @@ Rails.application.config.assets.version = "1.0"
 # config/initializers/assets.rb
 Rails.application.config.assets.paths << Rails.root.join('app', 'assets', 'stylesheets')
 Rails.application.config.assets.paths << Rails.root.join('app', 'assets', 'javascripts')
+Rails.application.config.assets.precompile += %w( active_storage.js )
+
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+Rails.application.config.assets.precompile += %w( blogs.scss )
+Rails.application.config.assets.precompile += %w( portfolios.scss )
+Rails.application.config.assets.precompile += %w( html.sortable.js )
+Rails.application.config.assets.precompile += %w( portfolios.coffee )
