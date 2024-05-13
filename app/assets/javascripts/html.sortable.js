@@ -1,5 +1,3 @@
-alert('heyyy');
-
 var sortable = (function () {
   'use strict';
 

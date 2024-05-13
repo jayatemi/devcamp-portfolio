@@ -31,6 +31,17 @@ class PortfoliosController < ApplicationController
   def create
     @portfolio_item = Portfolio.new(portfolio_params) #defines what the form is allowed to access
 
+    if params[:portfolio][:main_image].present?
+      @portfolio_item.main_image.attach(params[:portfolio][:main_image])
+    end
+
+    
+    if params[:portfolio][:thumb_image].present?
+      @portfolio_item.thumb_image.attach(params[:portfolio][:thumb_image])
+    end
+
+
+
     respond_to do |format|
       if @portfolio_item.save
         format.html { redirect_to portfolios_path, notice: "Your Portfolio item is now live." }
@@ -80,6 +91,8 @@ class PortfoliosController < ApplicationController
     params.require(:portfolio).permit(:title,
                                       :subtitle, 
                                       :body, 
+                                      :main_image,
+                                      :thumb_image,
                                       technologies_attributes: [:name]) 
   end
 
