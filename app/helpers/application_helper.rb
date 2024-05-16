@@ -21,4 +21,17 @@ module ApplicationHelper
     AtemiViewTool::Renderer.copyright 'Jonathan Atemi','| All Rights Reserved'
   end
 
+  def alerts
+    alert = (flash[:alert] || flash[:error] || flash[:notice])
+
+    if alert
+      alert_generator alert
+    end
+  end
+
+  def alert_generator msg
+    js add_gritter(msg, title: "Jonathan Atemi Portfolio", sticky: false)
+  end
+
+
 end
