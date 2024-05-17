@@ -11,6 +11,7 @@ Rails.application.routes.draw do
  
   get 'about-me', to: 'pages#about'
   get 'contact', to: 'pages#contact'
+  get 'my-twitter', to: 'pages#my_twitter'
 
   root to: 'pages#home'
 
