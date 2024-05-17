@@ -7,6 +7,7 @@
 //= require cocoon
 //= require gritter
 //= require portfolios
+//= require cable
 //= require turbolinks
 //= require_tree .
 

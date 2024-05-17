@@ -6,4 +6,6 @@ class Blog < ApplicationRecord
   validates_presence_of :title, :body
 
   belongs_to :topic, default: -> { Topic.find_by(id: '1') } 
+
+  has_many :comments, dependent: :destroy
 end
