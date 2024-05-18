@@ -8,4 +8,9 @@ class Blog < ApplicationRecord
   belongs_to :topic, default: -> { Topic.find_by(id: '1') } 
 
   has_many :comments, dependent: :destroy
+
+  def self.recent
+    order("created_at DESC")
+  end
+  
 end
